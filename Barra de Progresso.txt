@@ -1,0 +1,238 @@
+// BOOTSTRAP
+
+<?php
+?>
+	<html>
+		<head>
+  <title>Progress Bar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+		<style>
+
+			
+ #carregador_fundo  {
+    display: -ms-flexbox;
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+}
+			
+ #barra_progresso
+	{
+	
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007bff;
+    transition: width .6s ease;
+}
+		
+
+	
+	
+	#carregador
+	{
+		BORDER-RIGHT: #4c4c4c 1px solid;
+		PADDING-RIGHT: 0px;
+		BORDER-TOP: #4c4c4c 1px solid;
+		DISPLAY: block;
+		PADDING-LEFT: 0px;
+		FONT-SIZE: 20px;
+		Z-INDEX: 2;
+		PADDING-BOTTOM: 16px;
+		MARGIN: 0px auto;
+		BORDER-LEFT: #4c4c4c 1px solid;
+		WIDTH: 300px;
+		HEIGHT: 50PX;
+		COLOR: #ffffff;
+		PADDING-TOP: 10px;
+		BORDER-BOTTOM: #4c4c4c 1px solid;
+		FONT-FAMILY: Tahoma, Helvetica, sans;
+		BACKGROUND-COLOR: #2a8b51;		
+		TEXT-ALIGN: left
+		
+	}
+
+			</style>
+	
+	<script language="JavaScript">
+	//Variáveis globais
+	var _loadTimer	= setInterval(__loadAnima,18);
+	var _loadPos	= 0;
+	var _loadDir	= 2;
+	var _loadLen	= 0;
+	
+	//Anima a barra de progresso
+	function __loadAnima(){
+		var elem = document.getElementById("barra_progresso");
+		if(elem != null){
+			if (_loadPos==0) _loadLen += _loadDir;
+			if (_loadLen>32 || _loadPos>250) _loadPos += _loadDir;
+			if (_loadPos>250) _loadLen -= _loadDir;
+			if (_loadPos>250 && _loadLen==0) _loadPos=0;
+			elem.style.left		= _loadPos;
+			elem.style.width	= _loadLen;
+		}
+	}
+	
+	//Esconde o carregador
+	function __loadEsconde(){
+		this.clearInterval(_loadTimer);
+		var objLoader				= document.getElementById("carregador_pai");
+		objLoader.style.display		="none";
+		objLoader.style.visibility	="hidden";
+	}
+		
+	</script>
+	
+	<body onload="__loadEsconde();">
+	
+	<div  id="carregador_pai">	
+		<div id="carregador">		
+			<div align="center">Aguarde Processando...</div>
+			<div id="carregador_fundo">	
+<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+  aria-valuenow="" aria-valuemin="0" aria-valuemax="100" id="barra_progresso">
+  </div>
+		</div>			
+		</div>		
+	
+			</div>
+	</body>	
+	<?php
+?>
+
+
+
+
+
+
+
+
+
+
+///// SCRIPTCASE ///////////////////////
+
+Substituir 
+
+#334563 - #2a8b51
+
+
+
+
+<?php
+?>	
+	<html>
+	<head>
+	
+
+	<title>Progress Bar</title>
+	<style>
+
+	#barra_progresso
+	{
+		FONT-SIZE: 1px;
+		LEFT: 0px;
+		WIDTH: 1px;
+		POSITION: relative;
+		TOP: 1px;
+		HEIGHT: 5px;
+		BACKGROUND-COLOR: #005826;
+	}
+	#carregador_pai
+	{
+		WIDTH: 100%;
+		POSITION: absolute;
+		TOP: 35%;
+		TEXT-ALIGN: center;
+	}
+	#carregador_fundo 
+	{
+		FONT-SIZE: 1px;
+		LEFT: 8px;
+		WIDTH: 285px;
+		POSITION: relative;
+		TOP: 8px;
+		HEIGHT: 7px;
+		BACKGROUND-COLOR: #ffffff;
+	}
+	#carregador
+	{
+		BORDER-RIGHT: #4c4c4c 1px solid;
+		PADDING-RIGHT: 0px;
+		BORDER-TOP: #4c4c4c 1px solid;
+		DISPLAY: block;
+		PADDING-LEFT: 0px;
+		FONT-SIZE: 20px;
+		Z-INDEX: 2;
+		PADDING-BOTTOM: 16px;
+		MARGIN: 0px auto;
+		BORDER-LEFT: #4c4c4c 1px solid;
+		WIDTH: 300px;
+		HEIGHT: 50PX;
+		COLOR: #ffffff;
+		PADDING-TOP: 10px;
+		BORDER-BOTTOM: #4c4c4c 1px solid;
+		FONT-FAMILY: Tahoma, Helvetica, sans;
+		BACKGROUND-COLOR: #2a8b51;		
+		TEXT-ALIGN: left
+		
+	}
+		
+	</style>
+	<script language="JavaScript">
+	//Variáveis globais
+	var _loadTimer	= setInterval(__loadAnima,18);
+	var _loadPos	= 0;
+	var _loadDir	= 2;
+	var _loadLen	= 0;
+	
+	//Anima a barra de progresso
+	function __loadAnima(){
+		var elem = document.getElementById("barra_progresso");
+		if(elem != null){
+			if (_loadPos==0) _loadLen += _loadDir;
+			if (_loadLen>32 || _loadPos>250) _loadPos += _loadDir;
+			if (_loadPos>250) _loadLen -= _loadDir;
+			if (_loadPos>250 && _loadLen==0) _loadPos=0;
+			elem.style.left		= _loadPos;
+			elem.style.width	= _loadLen;
+		}
+	}
+	
+	//Esconde o carregador
+	function __loadEsconde(){
+		this.clearInterval(_loadTimer);
+		var objLoader				= document.getElementById("carregador_pai");
+		objLoader.style.display		="none";
+		objLoader.style.visibility	="hidden";
+	}
+		
+	</script>
+	</head>
+	<body onload="__loadEsconde();">	
+	<div id="carregador_pai">	
+		<div id="carregador">		
+			<div align="center">			
+				Aguarde Processando...</div>
+			<div id="carregador_fundo"><div id="barra_progresso"> </div>
+		</div>			
+		</div>		
+	</div>
+	</body>	
+	<?php
+?>

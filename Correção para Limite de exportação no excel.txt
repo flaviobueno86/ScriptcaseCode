@@ -1,0 +1,3 @@
+no onscript_ini acrescentar o comando ini_set("memory_limit","-1");
+
+32767

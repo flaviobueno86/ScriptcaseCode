@@ -1,0 +1,9 @@
+BEGIN
+  /* Procedure body */
+  OV_RESULT = 0;
+
+  if ( (MOD(IV_ANO,4) = 0) AND (MOD(IV_ANO,100) <> 0) or (MOD(IV_ANO,400) = 0) ) then
+    OV_RESULT = 1;
+
+  SUSPEND;
+END

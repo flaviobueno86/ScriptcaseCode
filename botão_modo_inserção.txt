@@ -1,0 +1,3 @@
+sc_apl_conf("form_tb_pacatend", "start", "new"); 
+sc_redir(form_tb_pacatend.php, parm1=[var_pac]);
+sc_commit_trans();

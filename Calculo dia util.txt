@@ -1,0 +1,36 @@
+<?php
+
+/**
+* Função para calcular o próximo dia útil de uma data
+* Formato de entrada da $data: AAAA-MM-DD
+*/
+function proximoDiaUtil($data, $saida = 'd/m/Y') {
+// Converte $data em um UNIX TIMESTAMP
+$timestamp = strtotime($data);
+
+// Calcula qual o dia da semana de $data
+// O resultado será um valor numérico:
+// 1 -> Segunda ... 7 -> Domingo
+$dia = date('N', $timestamp);
+
+// Se for sábado (6) ou domingo (7), calcula a próxima segunda-feira
+if ($dia >= 6) {
+$timestamp_final = $timestamp + ((8 - $dia) * 3600 * 24);
+} else {
+// Não é sábado nem domingo, mantém a data de entrada
+$timestamp_final = $timestamp;
+}
+
+return date($saida, $timestamp_final);
+}
+
+
+// Dia 05 de abril de 2009 é um domingo
+$data = '2009-04-05';
+
+// Calcula o próximo dia útil
+$data_final = proximoDiaUtil($data);
+// Resultado: 06/04/2009
+
+
+?>

@@ -1,0 +1,22 @@
+
+1- Formulário tipo (Grid Editavel View).
+
+2- Necessidade = Gravar ao dar enter ou Tab (Onchange) do ultimo Campo. PS: so Gravar no meu caso o Usuario apenas grava sem edição em caso de Edição tem que tratar mais o código.
+				Do tipo Radio 
+3- Criar um campo chamado linha do tipo Número, em modo invisível.
+
+4- No evento onLoadRecord
+
+{linha} = $sc_seq_vert;
+a variável $sc_seq_vert esta guardando o Numero de linha.
+
+5- Em Programação/ Criar un Novo Metodo Javascript no meu caso com o Nome de “atualiza” y incluir um parametro no meu caso “linha”, chamei linha para ficar mais fácil, eh que a função nm_atualizar_line pede 2 parametros, que tipo de atualização y em que linha.
+
+findPos(this); nm_atualiza_line('incluir', linha); return false;
+6- Criar um Evento Ajax no ultimo campo, ou no campo em que voçes querem que grave ao ser modificado ou clicado ou perda de Focus Etc. y agreguem o seguinte código
+
+$javascript_function = 'atualiza'; sc_ajax_javascript($javascript_function,{linha});
+
+
+
+EXEMPLO NA PRATICA APLICAÇÃO - gridedt_TB_REC_GLOSA_CM (RECURSO DE GLOSAS)

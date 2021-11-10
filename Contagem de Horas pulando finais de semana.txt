@@ -1,0 +1,52 @@
+$datadoemail = '2014-09-12';
+$horarecebimento = '19:00:00';
+$datadehoje = '2014-09-22';
+$hratual = '09:00:00';
+$horaini = '00:00:00';
+$horafim = '23:59:00';
+$somahoras='00:00:00';
+$dif='00:00:00';
+
+$dtexini = explode('-',$datadoemail);
+$dtexini[2];
+
+
+
+if($datadoemail<$datadehoje)
+{
+	$dif = sc_time_diff ($datadoemail.' '.$horafim, "yyyy-mm-dd hh:ii:ss",$datadoemail.' '.$horarecebimento, "yyyy-mm-dd hh:ii:ss");
+	
+	$somahoras = $somahoras  + ($dif[0] + 1);
+	
+	
+	do
+	{
+		
+		$datadoemail = sc_date($datadoemail, "aaaa-mm-dd", "+ ", 1, 0, 0);
+		
+		$diadasemana = date("w", strtotime($datadoemail));
+		
+		if(strtotime($datadoemail)==strtotime($datadehoje))
+		{			
+			$dif = sc_time_diff ($datadehoje.' '.$hratual, "yyyy-mm-dd hh:ii:ss",$datadoemail.' '.$horaini, "yyyy-mm-dd hh:ii:ss");			
+			
+			$somahoras = $somahoras + ($dif[0] + 1);
+		}
+		else
+		{
+			if(($diadasemana!='6')and($diadasemana!='0'))
+			{
+				$dif = sc_time_diff ($datadoemail.' '.$horafim, "yyyy-mm-dd hh:ii:ss",$datadoemail.' '.$horaini, "yyyy-mm-dd hh:ii:ss");
+								
+				$somahoras = $somahoras + ($dif[0] + 1);
+			}
+				
+		}
+		
+			
+	} while($datadoemail<$datadehoje);
+	
+	echo $somahoras;
+}
+
+

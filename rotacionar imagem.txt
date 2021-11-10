@@ -1,0 +1,44 @@
+$url = substr($_SERVER["REQUEST_URI"], strpos($_SERVER["REQUEST_URI"], '?')+1);
+//echo $url;
+
+$extensao = pathinfo($url, PATHINFO_EXTENSION);
+
+
+$filename = $url;
+
+// Rotação
+  $rotang = 270; 
+
+// Verifica a extensão
+if($extensao == "png" || $extensao == "PNG"  ){
+	
+    $source = imagecreatefrompng($filename) or die('Error opening file '.$filename);
+    imagealphablending($source, false);
+    imagesavealpha($source, true);
+
+    $rotation = imagerotate($source, $rotang, imageColorAllocateAlpha($source, 0, 0, 0, 127));
+    imagealphablending($rotation, false);
+    imagesavealpha($rotation, true);
+
+    header('Content-type: image/png');
+    imagepng($rotation);
+    imagedestroy($source);
+    imagedestroy($rotation);
+
+}
+
+if($extensao == "jpg" || $extensao == "JPG"  ){
+	
+    $source = imagecreatefromjpeg($filename) or die('Error opening file '.$filename);
+    imagealphablending($source, false);
+    imagesavealpha($source, true);
+
+    $rotation = imagerotate($source, $rotang, imageColorAllocateAlpha($source, 0, 0, 0, 127));
+    imagealphablending($rotation, false);
+    imagesavealpha($rotation, true);
+
+    header('Content-type: image/jpg');
+    imagejpeg($rotation);
+    imagedestroy($source);
+    imagedestroy($rotation);
+}

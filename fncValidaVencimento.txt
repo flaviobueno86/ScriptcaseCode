@@ -1,0 +1,37 @@
+if(fncValidaData($varDataEntrada)=='ok'){
+
+	//Converter formato da data para aaaa-mm-dd
+	$varDataEntrada = sc_date_conv($varDataEntrada,"aaaa-mm-dd","aaaa-mm-dd");
+
+	//Extrair dia , mes e ano da data de venda
+	$varDataTimestamp = strtotime($varDataEntrada);
+	$varDataDia =  date("d", $varDataTimestamp);
+	$varDataMes =  date("m", $varDataTimestamp);
+	$varDataAno =  date("Y", $varDataTimestamp);
+	$varVencimento = "";
+
+	//calcula o vencimento
+	switch ($varDataDia) {
+		case $varDataDia>='01' and $varDataDia<='05':
+			$varVencimento = "05";
+			break;
+		case $varDataDia>='06' and $varDataDia<='10':
+			$varVencimento = "10";
+			break;
+		case $varDataDia>='11' and $varDataDia<='15':
+			$varVencimento = "15";
+			break;
+		case $varDataDia>='16' and $varDataDia<='20':
+			$varVencimento = "20";
+			break;
+		case $varDataDia>='21' and $varDataDia<='25':
+			$varVencimento = "25";
+			break;
+		case $varDataDia>='26' and $varDataDia<='31':
+			$varVencimento = "30";
+			break;	
+	}
+
+	//retorna o vencimento no padrao aaaa-mm-dd
+	return sc_date($varDataAno.'-'.$varDataMes.'-'.$varVencimento, "aaaa-mm-dd", "+", 0, 1, 0);
+}

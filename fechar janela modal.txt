@@ -1,0 +1,12 @@
+//Fechar janela modal
+<script type='text/javascript'>
+function FecharJanela()
+{	
+ self.parent.tb_remove();	
+}
+function EscJanela()
+{	
+ self.parent.tb_remove();
+}
+
+</script>

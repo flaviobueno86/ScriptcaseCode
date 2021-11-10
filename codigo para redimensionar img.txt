@@ -1,0 +1,6 @@
+$foto = $_FILES['foto']; //Pega foto
+    	$redim = new Redimensiona(); // Instancia a classe redimensiona
+    	$src=$redim->Redimensionar($foto, 100, 135, $pasta); // Redimensiona a foto no diretório
+	
+		$binario = file_get_contents($src); //Converte imagem para binário
+		$binario = mysql_real_escape_string($binario);

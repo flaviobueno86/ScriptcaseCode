@@ -1,0 +1,13 @@
+//Funcao para limitar caracteres
+function limita($tamanho,$string)
+{
+	if(strlen($string) > $tamanho)
+	{		
+		return $string = substr ($string,0,$tamanho).'...';
+	}
+	else
+	{
+		return $string;
+	}
+	
+}

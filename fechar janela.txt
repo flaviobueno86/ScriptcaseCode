@@ -1,0 +1,8 @@
+<a href="javascript:void(0)" onclick="fecha()">fechar</a> 
+
+<script type="text/javascript">  
+function fecha() {  
+window.close();  
+opener.location.href=opener.location.href;  
+}  
+</script>

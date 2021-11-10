@@ -1,0 +1,66 @@
+var totalspan = document.querySelectorAll('a'). length;
+
+       		 
+
+for(i=0;i<totalspan;i++)
+
+ {
+	
+                
+var totalspan1 = document.querySelectorAll('a')[i].innerHTML;
+			
+            		
+var re = /\s*i>\s*/;
+            	 
+var nameList = totalspan1.split(re);
+				
+			
+if(nameList != '<span>'){	
+
+            
+               
+console.log(nameList[1]);
+   
+        
+       
+ }
+			
+	
+
+	
+        //console.log(totalspan1);
+     
+' 
+  }
+
+
+
+
+
+
+============================================================
+
+
+
+var totalspan = document.querySelectorAll('a'). length;
+?
+             for(i=0;i<totalspan;i++)
+?
+        {
+    
+                var totalspan1 = document.querySelectorAll('a')[i].innerHTML;
+            
+                    var re = /\s*i>\s*/;
+                 var nameList = totalspan1.split(re);
+                
+            if(nameList != '<span>'){   
+            
+               console.log(nameList[1]);
+           
+        }
+                
+?
+    
+        //console.log(totalspan1);
+        }
+?

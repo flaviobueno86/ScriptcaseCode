@@ -1,0 +1,2 @@
+window.nm_atualiza('alterar');
+setTimeout(nm_atualiza('alterar'),2000);

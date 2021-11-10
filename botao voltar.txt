@@ -1,0 +1,1 @@
+<td width="47%" align="right">  <a href="../menu/menu_form_php.php?sc_item_menu=item_2&amp;sc_apl_menu=pesquisa_agenda&amp;sc_apl_link=%2Fscriptcase7%2Fapp%2F&amp;sc_usa_grupo=S" id="item_2" title="" target="menu_iframe"><img src='../_lib/img/voltar.png' style='text-decoration:none;border-width:0' title='Voltar'></a></td>

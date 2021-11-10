@@ -1,0 +1,12 @@
+----PHP
+
+//Calculando a diferenca de dias entre dt_pag e autorizado
+$inicio = $row['AUTORIZAR']; 
+$fim = $row['DT_PAG'];
+$data_inicio = DateTime::createFromFormat('Y-m-d', $inicio);
+$data_fim = DateTime::createFromFormat('Y-m-d', $fim); 
+$dias = (int)$data_fim->diff($data_inicio)->format('%a');
+
+---SQL
+
+datediff(now(), AUTORIZAR) as DIAS

@@ -1,0 +1,6 @@
+$dtatual=date("Y/m/d");
+
+{diferencas} = sc_date_dif_2 ($dtatual, "aaaa/mm/dd", {p.dt_nasc}, "aaaa/mm/dd", 1);
+{idade} = {diferencas[2]}."a.".{diferencas[1]}."m.".{diferencas[0]}."d.";
+
+

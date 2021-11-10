@@ -1,0 +1,30 @@
+###################################################
+usar as funcoes sonumero e mascara
+
+
+#####funcao de mascara de telefone mal formatado##########################################
+fncMascaraTelefone($str){
+
+$varTelefone = soNumero($str); 
+
+if(strlen($varTelefone)==11){
+	
+	$varTelefone = mascara($varTelefone,'(###) ####-####');
+
+}elseif(strlen($varTelefone)==10){
+	
+	$varTelefone = mascara($varTelefone,'(##) ####-####');
+
+}elseif(strlen($varTelefone)==12){
+	
+	$varTelefone = mascara($varTelefone,'(###) #####-####');
+
+}elseif(strlen($varTelefone)==11){
+	
+	$varTelefone = mascara($varTelefone,'(##) #####-####');
+
+}
+
+return $varTelefone;
+
+}

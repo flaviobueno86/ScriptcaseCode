@@ -1,0 +1,21 @@
+<script language="JavaScript" type="text/javascript">
+var contador = 10;
+function conta() 
+{
+	document.getElementById('tempo').innerHTML='Tempo de captura ' + contador + ' segundos';
+	if(contador == 0) 
+	{
+		top.location.href='../index.php';
+	}
+	if (contador != 0)
+	{
+		contador = contador-1;
+		setTimeout("conta()", 1000);
+	}
+}
+</script>
+<span id="tempo"> 0</span>
+
+<script>
+	conta();
+</script>

@@ -1,0 +1,2 @@
+echo("<script language = 'javascript'> alert('Você se esqueceu de cadastrar as 4 respostas da pergunta anterior!'); </script>");
+    echo' "<script>window.location="form_tb_quest_prova.php?id_questionario='.[var_questao].'"</script>"';

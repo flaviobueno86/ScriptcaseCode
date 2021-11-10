@@ -1,0 +1,71 @@
+?>
+<style>
+/* CLASS - CONTAINER PRINCIPAL GRID */
+.scGridBorder {
+	width:1600px !important;
+}
+/* ID - CONTAINER REGISTROS */
+#sc_grid_body {
+	width:1555px !important;
+	overflow-x:scroll;
+	border:1px solid #CCC;
+}
+
+/* STYLE - BARRA DE ROLAGEM */
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 4px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #9faebc;
+}
+
+@media (min-width: 1600px) and (max-width: 1680px) {
+.scGridBorder {
+	width:1440px !important;
+}
+#sc_grid_body {
+	width:1395px !important;
+}
+}
+
+@media (min-width: 1440px) and (max-width: 1599px) {
+.scGridBorder {
+	width:1366px !important;
+}
+#sc_grid_body {
+	width:1320px !important;
+}
+}
+
+@media (min-width: 1282px) and (max-width: 1439px) {
+.scGridBorder {
+	width:1280px !important;
+}
+#sc_grid_body {
+	width:1235px !important;
+}
+}
+
+@media (min-width: 1280px) and (max-width: 1281px) {
+.scGridBorder {
+	width:1024px !important;
+}
+#sc_grid_body {
+	width:979px !important;
+}
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+.scGridBorder {
+	width:950px !important;
+}
+#sc_grid_body {
+	width:905px !important;
+}
+}
+</style>
+<?

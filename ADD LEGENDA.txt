@@ -1,0 +1,28 @@
+//Legenda Status  #8AB8DA
+sc_add_line_tit(
+	<table border='1' bordercolor='#34495e' bgcolor='#8AB8DA' width='50%' style="text-align:center">
+		<tr>
+			<td style="background-color:#ed1c24">
+				<font color='#ffffff'> Legenda:</font>
+			</td>			
+			<td  style="background-color:#ffff00">
+				<font color='#000000'>R</font>
+			</td>
+			<td style="background-color:#ffffff"> 
+				Em Recurso
+			</td>
+			<td  style="background-color:#339900">
+				<font color='#ffffff'>F</font>
+			</td>
+			<td style="background-color:#ffffff"> 
+				Finalizado
+			</td>	 
+	        <td  style="background-color:#ed1c24">
+				<font color='#ffffff'>EF</font>
+			</td>
+			<td style="background-color:#ffffff"> 
+				Enviado para o Financeiro
+			</td>
+		</tr>
+	</table> , 300, left, #34495e, 30,  #000000, );
+	

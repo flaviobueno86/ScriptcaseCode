@@ -1,0 +1,2 @@
+$varSenha = {Senha};
+{Senha} = md5($varSenha);

@@ -1,0 +1,5 @@
+sc_ajax_javascript('focus');
+
+
+document.getElementById("id_ac_especialidade").focus();
+

@@ -1,0 +1,7 @@
+Função Atualiza o IFRAME
+
+echo <<HTML
+	<script>
+		parent.document.getElementbyId("id-iframe-0").contentWindow.document.location.href = "../grig_15_funcionarios";
+	<script>
+	HTML;

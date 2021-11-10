@@ -1,0 +1,13 @@
+$varData = sc_date_conv($varData,"aaaa-mm-dd","aaaa-mm-dd");
+
+$data = explode("-","$varData"); // fatia a string $dat em pedados, usando / como referência
+$y = $data[0];
+$m = $data[1];
+$d = $data[2];
+
+
+$res = checkdate($m,$d,$y);
+
+if ($res == 1){
+  return "ok";
+} 

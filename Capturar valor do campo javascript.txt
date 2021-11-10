@@ -1,0 +1,1 @@
+document.F1.tipo.value

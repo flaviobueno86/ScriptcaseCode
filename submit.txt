@@ -1,0 +1,7 @@
+sc_ajax_javascript('submit');
+
+
+nm_atualiza('alterar');
+
+ 
+

@@ -1,0 +1,12 @@
+var tamanho_iframe = $(window.parent.parent).scrollTop(document.body.scrollHeight).height() - 155;
+
+if(tamanho_iframe>0){
+	parent.document.getElementById('nmsc_iframe_form_TB_QS_CADASTRO_1').style.height=tamanho_iframe+"px";
+	parent.document.getElementById('nmsc_iframe_grid_TB_QS_IAG_QUEST_2').style.height=tamanho_iframe+"px";
+	parent.document.getElementById('nmsc_iframe_grid_TB_QS_PIQ_ENC_3').style.height=tamanho_iframe+"px";
+	parent.document.getElementById('nmsc_iframe_form_TB_QS_PIQ_ESPEC_4').style.height=tamanho_iframe+"px";
+	parent.document.getElementById('nmsc_iframe_form_TB_QS_SATISFACAO_5').style.height=tamanho_iframe+"px";
+}
+
+
+

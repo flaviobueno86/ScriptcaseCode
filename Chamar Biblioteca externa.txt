@@ -1,0 +1,43 @@
+
+<!-- Chamada CSS -->
+
+
+
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/bootstrap-cerulean.min.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/charisma-app.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/chosen/chosen.min.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/colorbox/example3/colorbox.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/responsive-tables/responsive-tables.css'); ?>" />
+
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/css/jquery.noty.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/noty_theme_default.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/elfinder.min.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/elfinder.theme.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/jquery.iphone.toggle.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/uploadify.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/animate.min.css'); ?>" />
+
+
+<!-- chamada demais bibliotecas -->
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/jquery/jquery.min.js'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet','bower_components/jquery/jquery.js'); ?>" />
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/css/jquery.noty.css'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/bootstrap/dist/js/bootstrap.min.js'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'js/jquery.cookie.js'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/moment/min/moment.min.js'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/fullcalendar/dist/fullcalendar.min.js'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'js/jquery.dataTables.min.js'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/chosen/chosen.jquery.min.js'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/colorbox/jquery.colorbox-min.js'); ?>"/>
+
+<script src="<?php echo sc_url_library('prj', 'Intranet', '../js/jquery.noty.js'); ?>"/>

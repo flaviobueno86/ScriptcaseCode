@@ -1,0 +1,92 @@
+$html ='';
+
+sc_select(meus_dados, "SELECT  MES, DIA, FUNCIONARIO, DEPARTAMENTO, FOTO 
+FROM INT_FUNCIONARIOS 
+WHERE
+MES = EXTRACT(MONTH FROM(CAST('NOW' AS DATE)))and
+    DIA = EXTRACT(DAY FROM(CAST('NOW' AS DATE)))
+ORDER BY FUNCIONARIO
+");
+
+
+if ({meus_dados} === false)
+{
+echo "Erro de acesso. Mensagem = " . {meus_dados_erro};
+}
+else
+{
+
+while (!{meus_dados}->EOF){
+	
+
+$varMes = {meus_dados}->fields[0];
+$varDia = {meus_dados}->fields[1];
+$varFunc = {meus_dados}->fields[2];
+$varDepart= {meus_dados}->fields[3];
+$varFoto = base64_encode({meus_dados}->fields[4]);
+	
+
+//echo $varFoto = "<img border=1 height='63px' src='data:image/jpeg;base64,$varFoto'/>";
+	
+//$html .= $varId .  $varData .  $varResumo .   $varTexto . $varNomeArquivo .  "<br>";
+
+	
+$html .=  "
+        
+		
+	<div class='box-content' style='padding: 0'>
+    <div class='container'>
+	  <div class='container'>
+	  <div class='col-md-4'>
+	   <div class='box-content'>
+	   <ul class='dashboard-list'>
+		
+       <li>
+	     	   
+	    <img class='dashboard-avatar' src='data:image/jpeg;base64,$varFoto'/>
+ <strong>Name:</strong> <a href='#'>$varFunc</a><br>
+ <strong>Departamento:</strong><span class='label-success label label-      default'>$varDepart</span>
+ 
+  
+                     </ul>
+				    </li>
+                  </div>  
+				</div>	
+			  </div>
+               </div>
+			  </div> 
+   ";	
+
+
+{meus_dados}->MoveNext();
+}
+{meus_dados}->Close();
+}
+
+?>
+	
+        <?php echo $html; ?>
+
+	
+		
+
+<!-- Chamada CSS -->
+
+
+
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/bootstrap-cerulean.min.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/charisma-app.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/chosen/chosen.min.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/colorbox/example3/colorbox.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/responsive-tables/responsive-tables.css'); ?>" />
+
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'bower_components/css/jquery.noty.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/noty_theme_default.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/elfinder.min.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/elfinder.theme.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/jquery.iphone.toggle.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/uploadify.css'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php echo sc_url_library('prj', 'Intranet', 'css/animate.min.css'); ?>" />
+		
+
+   <?

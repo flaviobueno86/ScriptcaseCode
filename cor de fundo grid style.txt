@@ -1,0 +1,20 @@
+?>
+
+<script>
+$(document).ready(function(){
+    $("div div tr td:contains(CAMPO VAZIO)").css("background-color", "yellow");
+	$("div div tr td:contains(CAMPO VAZIO)").css("padding", "0");	
+	
+
+});
+</script>
+
+<?
+
+
+<script>
+$(document).ready(function(){	
+   $('tbody tr td:nth-child(4):contains(PENDENTE)').css('background-color', 'yellow');
+   $('tbody tr td:nth-child(4):contains(RESOLVIDO)').css('background-color', 'green');
+});
+</script>

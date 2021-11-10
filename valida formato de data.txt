@@ -1,0 +1,15 @@
+// VALIDAR DATA NO FORMATO DD/MM/AAAA
+$data = "35/11/2016";
+
+if (!eregi("^[0-9]{2}/[0-9]{2}/[0-9]{4}$", $data)) {	
+	echo "Data em formato inválido.";
+}else{
+	$exdata = explode("/",$data);
+	
+	if(checkdate($exdata[1],$exdata[0],$exdata[2])){
+		echo "é data";	
+		}else{
+			echo " não é data";	
+	}
+	//echo "valida";	
+}

@@ -1,0 +1,6 @@
+$("#menu ul li:nth-child(1)").click(function(){
+			
+			var posicao = $("#containerCP").position();
+			$('body,html').animate({scrollTop:posicao.top},600);
+			 
+	});

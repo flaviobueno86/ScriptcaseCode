@@ -1,0 +1,28 @@
+$varnomeArquivo = str_replace(" ", "_", $string);
+
+$ACENTOS   = array("À","Á","Â","Ã","à","á","â","ã");
+$SEMACENTOS= array("A","A","A","A","a","a","a","a");
+$varnomeArquivo=str_replace($ACENTOS,$SEMACENTOS, $varnomeArquivo);
+      
+$ACENTOS   = array("È","É","Ê","Ë","è","é","ê","ë");
+$SEMACENTOS= array("E","E","E","E","e","e","e","e");
+$varnomeArquivo=str_replace($ACENTOS,$SEMACENTOS, $varnomeArquivo);
+	   
+$ACENTOS   = array("Ì","Í","Î","Ï","ì","í","î","ï");
+$SEMACENTOS= array("I","I","I","I","i","i","i","i");
+$varnomeArquivo=str_replace($ACENTOS,$SEMACENTOS, $varnomeArquivo);
+      
+$ACENTOS   = array("Ò","Ó","Ô","Ö","Õ","ò","ó","ô","ö","õ");
+$SEMACENTOS= array("O","O","O","O","O","o","o","o","o","o");
+$varnomeArquivo=str_replace($ACENTOS,$SEMACENTOS, $varnomeArquivo);
+     
+$ACENTOS   = array("Ù","Ú","Û","Ü","ú","ù","ü","û");
+$SEMACENTOS= array("U","U","U","U","u","u","u","u");
+$varnomeArquivo=str_replace($ACENTOS,$SEMACENTOS, $varnomeArquivo);
+	   
+$ACENTOS   = array("Ç","ç","ª","º","°");
+$SEMACENTOS= array("C","c","a.","o.","o.");
+$varnomeArquivo=str_replace($ACENTOS,$SEMACENTOS, $varnomeArquivo);      
+
+return $varnomeArquivo;
+
